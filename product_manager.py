@@ -17,3 +17,10 @@ class ProductManager:
         total = sum(p.price * p.quantity for p in self.products)
         print(f"\nUkupna vrednost inventara: {total} RSD")
         return total
+def remove_product(self, product_name):
+    for product in self.products:
+        if product.name == product_name:
+            self.products.remove(product)
+            print(f"Proizvod {product_name} uklonjen!")
+            return
+    print(f"Proizvod {product_name} nije pronađen!")
