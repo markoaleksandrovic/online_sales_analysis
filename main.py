@@ -1,5 +1,6 @@
 from product import Product
 from product_manager import ProductManager
+from cart import Cart
 
 # Kreiraj instancu ProductManager
 manager = ProductManager()
@@ -18,3 +19,10 @@ manager.add_product(p4)
 # Prikaz i ukupna vrednost
 manager.display_all_products()
 manager.calculate_total_value()
+
+cart = Cart()
+cart.add_to_cart(p1)  # Laptop
+cart.add_to_cart(p2)  # Miš
+cart.add_to_cart(p4)  # Monitor
+
+cart.display_cart()
