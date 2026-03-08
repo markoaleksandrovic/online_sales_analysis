@@ -1,20 +1,26 @@
 from product import Product
 from product_manager import ProductManager
+from cart import Cart
 
 # Kreiraj instancu ProductManager
 manager = ProductManager()
 
-# Dodaj proizvode
-p1 = Product("Laptop", 50000, 10)
-p2 = Product("Miš", 1500, 50)
-p3 = Product("Tastatura", 3000, 30)
-p4 = Product("Monitor", 25000, 15)
+# PROMENJENI proizvodi
+p1 = Product("Gaming Laptop", 75000, 5)      
+p2 = Product("Bežični miš", 2500, 25)       
+p3 = Product("Mehanička tastatura", 5000, 20)
+p4 = Product("4K Monitor", 35000, 8)         
 
 manager.add_product(p1)
 manager.add_product(p2)
 manager.add_product(p3)
 manager.add_product(p4)
 
-# Prikaz i ukupna vrednost
-manager.display_all_products()
-manager.calculate_total_value()
+
+# Korpa
+cart = Cart()
+cart.add_to_cart(p1)
+cart.add_to_cart(p2)
+cart.add_to_cart(p4)
+
+cart.display_cart()
