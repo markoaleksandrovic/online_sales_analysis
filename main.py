@@ -16,11 +16,13 @@ manager.add_product(p2)
 manager.add_product(p3)
 manager.add_product(p4)
 
+# Prikaz i ukupna vrednost
+manager.display_all_products()
+manager.calculate_total_value()
 
-# Korpa
 cart = Cart()
-cart.add_to_cart(p1)
-cart.add_to_cart(p2)
-cart.add_to_cart(p4)
+cart.add_to_cart(p1)  # Laptop
+cart.add_to_cart(p2)  # Miš
+cart.add_to_cart(p4)  # Monitor
 
 cart.display_cart()
